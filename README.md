@@ -20,7 +20,7 @@ Technology Stack:
 - Version Control: Git
 - Hosting-ready (can be deployed on platforms like Heroku, Vercel, or AWS)
 
-Folder Structure:
+'''Folder Structure:
 -----------------
 project/
 ├── blog/                  # Main Django app
@@ -33,7 +33,7 @@ project/
 ├── media/                 # Uploaded post images
 ├── project_name/          # Django project settings
 ├── db.sqlite3             # Default database
-└── manage.py              # Django project manager
+└── manage.py              # Django project manager'''
 
 How to Run:
 ------------
