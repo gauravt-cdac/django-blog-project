@@ -36,7 +36,7 @@ project/
 └── manage.py              # Django project manager
 
 How to Run:
------------
+------------
 1. Clone the repository:
    git clone https://github.com/your-username/django-blog-project.git
 
