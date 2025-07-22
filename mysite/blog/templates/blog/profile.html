@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+  <!-- Styled welcome message -->
+  <div class="alert alert-info d-flex align-items-center justify-content-between" role="alert">
+    <h4 class="mb-0">👋 Welcome, <strong>{{ user.username|title }}</strong>!</h4>
+    <span class="badge bg-primary">Profile Page</span>
+  </div>
+
+  <h4 class="mt-4 mb-3">Your Posts:</h4>
+
+  {% if posts %}
+    <ul class="list-group mb-4">
+      {% for post in posts %}
+        <li class="list-group-item">
+          <strong>{{ post.title }}</strong>
+          <br>
+          <small class="text-muted">Created: {{ post.created_at }}</small>
+          {% if post.image %}
+            <div class="mt-2">
+              <img src="{{ post.image.url }}" alt="Post Image" class="img-fluid" style="max-width: 300px;">
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endif %}
+
+  <a class="btn btn-outline-primary" href="{% url 'post_list' %}">← Back to Posts</a>
+
+</div>
+{% endblock %}
